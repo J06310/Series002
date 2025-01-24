@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Lista de Videos Modal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .folder-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .folder {
+            cursor: pointer;
+            text-align: center;
+            margin: 10px;
+            width: calc(33.33% - 20px);
+            position: relative;
+            color: #FFFFFF;
+        }
+
+        .folder img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .folder:hover img {
+            transform: scale(1.05);
+        }
+
+        .modal, .inner-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            background-color: #0, 0, 0, 0;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .modal-content img {
+            width: 50%;
+            display: block;
+            margin: 0 auto 15px;
+            border-radius: 8px;
+        }
+
+        .close {
+            color: #ffffff;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        .modal-info {
+            font-size: 15px;
+            color: #FFFFFF;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .modal-info h3 {
+            color: #ffcc00;
+            font-size: 22px;
+            white-space: nowrap;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .modal-info p {
+            margin: 8px 0;
+        }
+
+        .icono {
+            color: #FFFFFF;
+            margin-right: 8px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            color: #FFFFFF;
+            background-color: #FF0000;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin: 5px;
+            display: inline-block;
+            white-space: nowrap;
+            width: auto;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #FF0000;
+        }
+
+        .video-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="folder-container">
+<!-- Serie #1 -->
+<div class="folder" onclick="openModal('modalTed')">
+    <img src="https://image.tmdb.org/t/p/original/cPn71YFDENH0JkWUezlsLyWmLfN.jpg" alt="Ted">
+</div>
+</div>
+
+<!-- AQUI VAN LOS MODALES DE LAS SERIES -->
+
+<!-- SERIE "TED" -->
+
+<!-- MODAL -->
+
+<div id="modalTed" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalTed')">×</span>
+        <img src="https://image.tmdb.org/t/p/original/cPn71YFDENH0JkWUezlsLyWmLfN.jpg" alt="Poster de Ted">
+        <h3>TED</h3>
+        <div class="modal-info">
+            <p><i class="fas fa-calendar-alt icono"></i><strong>Año:</strong> 2024</p>
+            <p><i class="fas fa-film icono"></i><strong>Género:</strong> Comedia</p>
+            <p><i class="fas fa-tv icono"></i><strong>Temporadas:</strong> 1</p>
+            <p><i class="fas fa-list icono"></i><strong>Episodios:</strong> 7</p>
+            <p><i class="fas fa-signal icono"></i><strong>Estado:</strong> Continúa</p>
+            <p><i class="fas fa-info-circle icono"></i><strong>Sinopsis:</strong> Es 1993 y el momento de fama del oso Ted ha pasado, dejándolo viviendo con su mejor amigo, John Bennett, de 16 años, que vive en una casa de clase trabajadora de Boston con sus padres y su primo. Puede que Ted no sea la mejor influencia para John, pero a fin de cuentas, está dispuesto a arriesgarse para ayudar a su amigo y su familia. Precuela de las películas de “Ted”.</p>
+            <div class="video-buttons">
+                <span class="button" onclick="openInnerModal('innerModalTedT1')">TEMPORADA 1</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TEMPORADA 1 -->
+
+<div id="innerModalTedT1" class="inner-modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeInnerModal('innerModalTedT1')">×</span>
+        <div class="video-buttons">
+            <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9zdHJlYW1oZy5jb20vZS9ub2lqOHcxb2ZtNDI=" class="button" target="_blank">Episodio 1</a>
+            <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9zdHJlYW1oZy5jb20vZS92bGtjMzJrdWlkajY=" class="button" target="_blank">Episodio 2</a>
+            <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9zdHJlYW1oZy5jb20vZS96d3JvZnF0eXl6eGU=" class="button" target="_blank">Episodio 3</a>
+            <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9zdHJlYW1oZy5jb20vZS96OWFiaXc4eDA1dzg=" class="button" target="_blank">Episodio 4</a>
+            <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9zdHJlYW1oZy5jb20vZS83c2xqa3ZrMmtybm0=" class="button" target="_blank">Episodio 5</a>
+            <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9zdHJlYW1oZy5jb20vZS9lcGo0eGlsaDgzMHY=" class="button" target="_blank">Episodio 6</a>
+            <a href="https://vpn-movie-ofc.blogspot.com/2024/05/embed_27.html?r=aHR0cHM6Ly9zdHJlYW1oZy5jb20vZS9iaGlxc3J6cjhkZXU=" class="button" target="_blank">Episodio 7</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+(function() {
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+    }
+
+    function openInnerModal(innerModalId) {
+        document.getElementById(innerModalId).style.display = "block";
+    }
+
+    function closeInnerModal(innerModalId) {
+        document.getElementById(innerModalId).style.display = "none";
+    }
+
+    // Función para abrir enlaces externos en una nueva pestaña
+    function openExternalLink(url) {
+        window.open(url, "_blank");
+    }
+
+    window.openModal = openModal;
+    window.closeModal = closeModal;
+    window.openInnerModal = openInnerModal;
+    window.closeInnerModal = closeInnerModal;
+    window.openExternalLink = openExternalLink;
+})();
+</script>
