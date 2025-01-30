@@ -143,15 +143,15 @@
 <div class="folder-container">
 <!-- Serie #1 -->
 <div class="folder" onclick="openModal('modalTed')">
-    <img src="https://image.tmdb.org/t/p/original/cPn71YFDENH0JkWUezlsLyWmLfN.jpg" alt="Ted">
+    <img src="https://image.tmdb.org/t/p/original/cPn71YFDENH0JkWUezlsLyWmLfN.jpg" alt="Ted"><div class="label">#1</div>
 </div>
 <!-- Serie #2 -->
 <div class="folder" onclick="openModal('modalBandidos')">
-    <img src="https://image.tmdb.org/t/p/original/uc3hkNY2bsmeE3omhcbZzoCe1vv.jpg" alt="Bandidos">
+    <img src="https://image.tmdb.org/t/p/original/uc3hkNY2bsmeE3omhcbZzoCe1vv.jpg" alt="Bandidos"><div class="label">#2</div>
 </div>
 <!-- Serie #3 -->
 <div class="folder" onclick="openModal('modalPrimeraVez')">
-        <img src="https://image.tmdb.org/t/p/original/8SB4i4grrqii6ND5plhN5fwSPfA.jpg" alt="La primera vez">
+        <img src="https://image.tmdb.org/t/p/original/8SB4i4grrqii6ND5plhN5fwSPfA.jpg" alt="La primera vez"><div class="label">#3</div>
 </div>
 </div>
 
@@ -326,9 +326,25 @@
 
 
 
+<!-- AQUI ESTA EL CÓDIGO DE LA "ETIQUETA" -->
 
-
-
+<style>
+    .poster-container {
+        position: relative;
+        display: inline-block;
+    }
+    .label {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        background: red;
+        color: white;
+        padding: 3px 5px;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 3px;
+    }
+</style>
 
 <script>
 (function() {
